@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 10px;
+    overflow: hidden; /* Prevent video overflow */
+}
+
+#search{
+   background-color: rgb(252, 237, 237);
+   padding: 2px;
+   margin-left: 100px;
+}
+#search:hover{
+    background-color: greenyellow;
+}
+#city_name{
+  inline-size: 200px;
+  
+}
+.inner{
+    /* background-image: url('https://images.unsplash.com/photo-1668521546474-607df6f96ff0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y2xvdWQlMjBpbWFnZXN8ZW58MHx8MHx8fDA%3D'); */
+    padding: 25px;
+} 
+p{
+    text-align: left;
+    padding: 2px;
+}
+
+#videoBG {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* Place video behind other content */
+}
+
+h1 {
+    color: white; /* Ensure text is readable on top of video */
+    z-index: 1; /* Place text above video */
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.5); /* Add semi-transparent background color to container */
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    max-width: 400px; /* Set a maximum width for the container */
+    width: 100%; /* Take up full width within its parent */
+    margin: 10px; /* Add some margin */
+    z-index: 1; /* Place container above video */
+    height: 210px;
+    background-image: url('https://images.unsplash.com/photo-1668521546474-607df6f96ff0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y2xvdWQlMjBpbWFnZXN8ZW58MHx8MHx8fDA%3D');
+  /* height: 100vh; */
+}
+
+/* Your existing CSS styles for .inner, p, input, button, and media query */
+@media only screen and (max-width: 400px) and (max-height: 607px) {
+    #city_name {
+        margin: 0 auto; /* Center the element horizontally */
+        text-align: center; /* Center the text within the element */
+    }
+    #search{
+        margin-left: 70px; /* Center the element horizontally */
+        padding: 5px;
+        align-items: center; /* Center the text within the element */
+    }
+}
